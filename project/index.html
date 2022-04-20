@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="./index-img/shopping-cart.png">
+  <title>One hand shopping</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body style="background-color: #fce5e7af;">
+  <!-- NAV BAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="One Hand Shopping">
+        <img src="./index-img/logo.png" class="img-thumbnail logo_img" alt="One Hand Shopping">
+      </a>
+      <form class="d-flex w-50">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search your favourite..." aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-danger" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#"><i class="fas fa-sign-in-alt text-danger"></i> login</a>              
+               <!-- model -->
+               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <center>
+                        <h5 class="modal-title"><i class="fas fa-sign-in-alt text-danger"></i> Login through here..</h5>
+                      </center>
+                      <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                       <form class="row g-3 needs-validation" novalidate>
+                              <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="Your Email" required>
+                                <label for="floatingInput">Email address</label>
+                              </div>
+                              <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                                <label for="floatingPassword">Password</label>
+                              </div>
+                              <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                                <p class="login-condition">By continuing, you agree to Our <a class="login-condition-link" href="#">Teams & Condition</a>.</p>
+                              </div>                             
+                              <center>
+                                <div>
+                                  <button class="btn btn-danger" type="submit">Log In</button>
+                                </div>
+                              </center>
+                            </form><br><br>
+                            <center>
+                              <p>New to One hand Shopping? <a class="login-condition-link" href="./signUp.html">Create an Account</a></p>
+                            </center>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./top-brands.html">Products</a>
+            </li>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Contact Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item menu-hover" href="#">24/7 Customer Care</a></li>
+                <li><a class="dropdown-item menu-hover" href="#">Your Rewards</a></li>
+                <li><a class="dropdown-item menu-hover" href="./teams.html">Teams & Condition</a></li>                
+                <li><a class="dropdown-item menu-hover" href="#">About Us</a></li>
+                <li><a class="dropdown-item menu-hover" href="#">Get in Touch</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropCart" href="#"><i class="fas fa-shopping-cart text-danger"></i><sup>1</sup> My Cart</a>
+
+              <!-- Cart Modal -->
+              <div class="modal fade" id="staticBackdropCart" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                      <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                      <div class="container ">
+
+                        <div class="row text-center">
+                          <div class="col-3">
+                            <img src="./best-seller/best-1.jpg" class="w-100">
+                          </div>
+                          <div class="col-3">
+                            John Players
+                          </div>
+                          <div class="col-3">
+                            $4000
+                          </div>
+                          <div class="col-3">
+                            <button type="button" class="btn btn-danger" id="close">X</button>
+                          </div>
+                        </div><br>
+
+                        <div class="row text-center">
+                          <div class="col-3">
+                            <img src="./best-seller/best-2.jpg" class="w-100">
+                          </div>
+                          <div class="col-3">
+                            Johns cups
+                          </div>
+                          <div class="col-3">
+                            $4500
+                          </div>
+                          <div class="col-3">
+                            <button type="button" class="btn btn-danger" id="close">X</button>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Place Order</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </div>  
+      </div>
+  </nav>
+
+  <!-- CAROUSEL -->
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="#"><img src="./index-img/carosel-img-1.jpg" class="d-block w-100"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="#"><img src="./index-img/carosel-img-2.jpg" class="d-block w-100"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="#"><img src="./index-img/carosel-img-3.jpg" class="d-block w-100"></a>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="spacing"></div>
+
+  <div class="d-flex justify-content-center my-5">
+    <a href="#"><img class="w-100" src="./index-img/offer-img.png"></a>
+  </div>
+
+  <!-- DEALS -->
+  
+  <div class="container-fluid py-4 bg-light mb-4">
+    <center class="text-danger mb-3"><h1>TOP DEALS</h1></center>
+    <div class="row g-2">
+      <div class="col-lg-1 col-sm-2">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-1.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Shoes</a></center>
+      </div>
+      <div class="col-lg-1 col-sm-2">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-2.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Shirts</a></center>
+      </div>
+      <div class="col-lg-1 col-sm-2">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-3.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Pants</a></center>
+      </div>
+      <div class="col-lg-1 col-sm-2">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-4.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Watch</a></center>
+      </div>
+      <div class="col-lg-1 col-sm-2">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-5.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Shorts</a></center>
+      </div>
+      <div class="col-lg-1 col-sm-2">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-6.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">T Shirts</a></center>
+      </div>
+      <div class="col-lg-1 d-lg-grid d-sm-none">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-7.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Goggles</a></center>
+      </div>
+      <div class="col-lg-1 d-lg-grid d-sm-none">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-8.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Slippers</a></center>
+      </div>
+      <div class="col-lg-1 d-lg-grid d-sm-none">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-9.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Airpods</a></center>
+      </div>
+      <div class="col-lg-1 d-lg-grid d-sm-none">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-10.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Wallets</a></center>
+      </div>
+      <div class="col-lg-1 d-lg-grid d-sm-none">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-11.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Belts</a></center>
+      </div>
+      <div class="col-lg-1 d-lg-grid d-sm-none">
+        <div class="img-zoom">
+          <a href="#"><img src="./index-img/deal-image-12.png" class="rounded w-100"></a>
+        </div>
+        <center><a class="deals-link deals-link-hover" href="#">Chains</a></center>
+      </div>
+  </div>
+  </div>
+
+  <div class="spacing"></div>
+
+    <div class="container-fluid">
+      <div class="fs-2 text-danger head-border">Top Brands<a class="float-end btn btn-outline-danger mt-2" href="./top-brands.html">View more</a></div><br>
+    </div>
+    <div class="container-fluid pb-3">
+      <div class="row g-2">
+        <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+          <div class="card hover-none">
+            <img src="./formals/formals-1.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-text text-danger text-center">John Players</h5>
+              <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <div>
+                <h5>Price Range:</h5>
+                <p>$2000</p>
+              </div>
+            </div>
+            <div class="text-center head-card-hover">
+              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+          <div class="card hover-none">
+            <img src="./formals/formals-2.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-text text-danger text-center">Louis Phillipe</h5>
+              <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <div>
+                <h5>Price Range:</h5>
+                <p>$3500</p>
+              </div>
+            </div>
+            <div class="text-center head-card-hover">
+              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+          <div class="card hover-none">
+            <img src="./formals/formals-3.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-text text-danger text-center">Ajio</h5>
+              <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <div>
+                <h5>Price Range:</h5>
+                <p>$2499</p>
+              </div>
+            </div>
+            <div class="text-center head-card-hover">
+              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+          <div class="card hover-none">
+            <img src="./formals/formals-4.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-text text-danger text-center">Raymond</h5>
+              <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <div>
+                <h5>Price Range:</h5>
+                <p>$4000</p>
+              </div>
+            </div>
+            <div class="text-center head-card-hover">
+              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+          <div class="card hover-none">
+            <img src="./formals/formals-5.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-text text-danger text-center">Indian Terrain</h5>
+              <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <div>
+                <h5>Price Range:</h5>
+                <p>$2600</p>
+              </div>
+            </div>
+            <div class="text-center head-card-hover">
+              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+          <div class="card hover-none">
+            <a href="#"><img src="./formals/formals-6.jpg" class="card-img-top"></a>
+            <div class="card-body">
+              <h5 class="card-text text-danger text-center">Arrow</h5>
+              <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+              <div>
+                <h5>Price Range:</h5>
+                <p>$5000</p>
+              </div>
+            </div>
+            <div class="text-center head-card-hover">
+              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <div class="spacing"></div>
+
+  <div class="bg-img">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-12">
+              <div class="inner-text ">
+                  <center >
+                    <h5><i>TRADES EVERYWEEK</i></h5>
+                    <p>NEW <strong>SUITS</strong> STYLE</p><br>
+                    <h1>Summer Sale Buy 1 Get 1 Free</h1>
+                    <a href="./top-brands.html" class="btn btn-warning text-light">SHOP NOW</a>
+                  </center>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacing"></div>
+
+  <div class="container-fluid">
+    <div class="fs-2 text-danger head-border">Best Seller<a class="float-end btn btn-outline-danger mt-2" href="./top-brands.html">View more</a></div><br>
+  </div>
+  <div class="container-fluid pb-3">
+    <div class="row g-2">
+      <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+        <div class="card hover-none">
+          <img src="./best-seller/best-1.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-text text-danger text-center">John Players</h5>
+            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <div>
+              <h5>Price Range:</h5>
+              <p>$2000</p>
+            </div>
+          </div>
+          <div class="text-center head-card-hover">
+            <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+        <div class="card hover-none">
+          <img src="./best-seller/best-2.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-text text-danger text-center">Louis Phillipe</h5>
+            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <div>
+              <h5>Price Range:</h5>
+              <p>$3500</p>
+            </div>
+          </div>
+          <div class="text-center head-card-hover">
+            <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+        <div class="card hover-none">
+          <img src="./best-seller/best-3.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-text text-danger text-center">Ajio</h5>
+            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <div>
+              <h5>Price Range:</h5>
+              <p>$2499</p>
+            </div>
+          </div>
+          <div class="text-center head-card-hover">
+            <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+        <div class="card hover-none">
+          <img src="./best-seller/best-4.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-text text-danger text-center">Raymond</h5>
+            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <div>
+              <h5>Price Range:</h5>
+              <p>$4000</p>
+            </div>
+          </div>
+          <div class="text-center head-card-hover">
+            <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  card-hover">
+        <div class="card hover-none">
+          <img src="./best-seller/best-5.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-text text-danger text-center">Indian Terrain</h5>
+            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <div>
+              <h5>Price Range:</h5>
+              <p>$2600</p>
+            </div>
+          </div>
+          <div class="text-center head-card-hover">
+            <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
+        <div class="card hover-none">
+          <a href="#"><img src="./best-seller/best-6.jpg" class="card-img-top"></a>
+          <div class="card-body">
+            <h5 class="card-text text-danger text-center">Arrow</h5>
+            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+            <div>
+              <h5>Price Range:</h5>
+              <p>$5000</p>
+            </div>
+          </div>
+          <div class="text-center head-card-hover">
+            <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacing"></div>
+
+  <div class="container-fluid d-lg-grid d-sm-none bg-light pb-5 pt-3 mb-5">
+    <div class="row">
+      <div class="col-4">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <center class="fs-3 fw-bolder mb-4">TOP SELLING</center>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon btn-danger mt-5 rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon btn-danger mt-5 rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-4">
+        <div id="carouselExampleInterval1" class="carousel slide" data-bs-ride="carousel">
+          <center class="fs-3 fw-bolder mb-4">TOP SELLING</center>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon btn-dark mt-5 rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+            <span class="carousel-control-next-icon btn-dark mt-5 rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-4">
+        <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
+          <center class="fs-3 fw-bolder mb-4">TOP SELLING</center>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="col-12 pb-5">
+                  <div class="card bg-clr">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-clr mt-5">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <a href="#"><img src="./best-seller/best-1.jpg" class="img-fluid rounded-start border-img w-100" ></a>
+                      </div>
+                      <div class="col-md-8 d-flex align-items-center">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger">Arrow</h5>
+                          <p class="card-text">
+                            <h5>Price Range:</h5>
+                            <p>Rs.1600-Rs.5000</p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon btn-danger mt-5 rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
+            <span class="carousel-control-next-icon btn-danger mt-5 rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-3 col-sm-12 d-md-grid justify-content-md-center">
+            <h4>Email Us</h4>
+            <span class="text-danger"><i class="fas fa-envelope"></i> @<a href="#" class="link-danger">Onehandshoping.com</a></span><br><br>
+            <h4>Phone Number</h4>
+            <a href="#" class="link-danger"><span><i class="fas fa-phone"></i></span> 789-289-543</a>
+          </div>
+          <div class="col-lg-6 border-around col-sm-12 d-md-grid justify-content-md-center">
+            <center>
+              <img src="./index-img/footer-logo.png" class="w-50">
+              <h5>Our website is user friendly to buy what the things</h5>
+            </center>
+          </div>
+          <div class="col-lg-3 col-sm-12 ">
+            <div class="row d-flex align-items-center">
+              <div class="col-6" >
+                <ul class="list-group list-group-flush" >
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item footer-list"><a href="">demo</a></li>
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                  <li class="list-group-item footer-list"><a href="#">demo</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <center>
+          <a href="#" class="circle"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class=" circle"><i class="fab fa-twitter"></i></a>
+          <a href="#" class=" circle"><i class="fab fa-youtube"></i></a>
+          <a href="#" class=" circle"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class=" circle"><i class="fab fa-instagram"></i></a>
+          <h6 class="text-danger my-3">copy Rights(2021-2025)</h6>
+        </center>
+      </div>
+    </footer>
+
+  <script src="./index.js"></script>
+  <script src="https://kit.fontawesome.com/ef6dd004c6.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
