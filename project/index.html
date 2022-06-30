@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./index.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body style="background-color: #fce5e7af;">
   <!-- NAV BAR -->
@@ -91,48 +92,68 @@
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                      <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-shopping-cart text-danger"></i> Cart</h5>
                       <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <div class="modal-body">
-                      <div class="container ">
-
-                        <div class="row text-center">
+                      <div class="container cart-container">
+                        <div class="row text-center text-danger">
                           <div class="col-3">
-                            <img src="./best-seller/best-1.jpg" class="w-100">
+                            <h3><u>ITEM</u></h3>
                           </div>
                           <div class="col-3">
-                            John Players
+                            <h3><u>PRODUCT</u></h3>
                           </div>
                           <div class="col-3">
-                            $4000
+                            <h3><u>PRICE</u></h3>
                           </div>
                           <div class="col-3">
-                            <button type="button" class="btn btn-danger" id="close">X</button>
+                            <h3><u>QUANTITY</u></h3>
                           </div>
                         </div><br>
 
-                        <div class="row text-center">
-                          <div class="col-3">
-                            <img src="./best-seller/best-2.jpg" class="w-100">
-                          </div>
-                          <div class="col-3">
-                            Johns cups
-                          </div>
-                          <div class="col-3">
-                            $4500
-                          </div>
-                          <div class="col-3">
-                            <button type="button" class="btn btn-danger" id="close">X</button>
-                          </div>
+                        <div class="cart">
+                          <div class="row cart-container-rows text-center">
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                              <img src="./best-seller/best-1.jpg" class="w-50">
+                            </div>
+                            <div class="col-3 d-flex align-items-center justify-content-center h5">
+                              John Players
+                            </div>
+                            <div class="product-price d-flex align-items-center justify-content-center col-3 h5">
+                              $4000
+                            </div>
+                            <div class="col-3 d-flex align-items-center justify-content-center gap-2">
+                              <input type="number" style="outline:none;" class="cart-value border border-danger border-3 rounded w-25" value="1" min="1">
+                              <button type="button" class="btn btn-danger close">X</button>
+                            </div>
+                          </div><br>
+  
+                          <div class="row cart-container-rows text-center">
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                              <img src="./best-seller/best-2.jpg" class="w-50">
+                            </div>
+                            <div class="col-3 d-flex align-items-center justify-content-center h5">
+                              Johns cups
+                            </div>
+                            <div class="product-price d-flex align-items-center justify-content-center col-3 h5">
+                              $4500
+                            </div>
+                            <div class="col-3 d-flex align-items-center justify-content-center gap-2">
+                              <input type="number" style="outline:none;" class="cart-value border border-danger border-3 rounded w-25" value="1" min="1">
+                              <button type="button" class="btn btn-danger close">X</button>
+                            </div>
+                          </div><br>
                         </div>
-                        
+                        <div class="row text-center">
+                          <h4 class="d-flex justify-content-end"><span class="text-danger">Total : </span><span class="total-price"> $0</span></h4>
+                        </div>
                       </div>
                     </div>
 
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Place Order</button>
+                      <a class="place-order btn btn-danger" data-bs-dismiss="modal">Place Order</a>
                     </div>
                   </div>
                 </div>
@@ -268,97 +289,97 @@
       <div class="row g-2">
         <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
           <div class="card hover-none">
-            <img src="./formals/formals-1.jpg" class="card-img-top">
+            <img src="./formals/formals-1.jpg" class="card-img-top product-img">
             <div class="card-body">
               <h5 class="card-text text-danger text-center">John Players</h5>
               <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
               <div>
                 <h5>Price Range:</h5>
-                <p>$2000</p>
+                <p class="brand-price">$2000</p>
               </div>
             </div>
             <div class="text-center head-card-hover">
-              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              <a class="cart-hover add-product" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
           </div>
         </div>
         <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
           <div class="card hover-none">
-            <img src="./formals/formals-2.jpg" class="card-img-top">
+            <img src="./formals/formals-2.jpg" class="card-img-top product-img">
             <div class="card-body">
               <h5 class="card-text text-danger text-center">Louis Phillipe</h5>
               <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
               <div>
                 <h5>Price Range:</h5>
-                <p>$3500</p>
+                <p class="brand-price">$3500</p>
               </div>
             </div>
             <div class="text-center head-card-hover">
-              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              <a class="cart-hover add-product" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
           </div>
         </div>
         <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
           <div class="card hover-none">
-            <img src="./formals/formals-3.jpg" class="card-img-top">
+            <img src="./formals/formals-3.jpg" class="card-img-top product-img">
             <div class="card-body">
               <h5 class="card-text text-danger text-center">Ajio</h5>
               <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
               <div>
                 <h5>Price Range:</h5>
-                <p>$2499</p>
+                <p class="brand-price">$2499</p>
               </div>
             </div>
             <div class="text-center head-card-hover">
-              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              <a class="cart-hover add-product" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
           </div>
         </div>
         <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
           <div class="card hover-none">
-            <img src="./formals/formals-4.jpg" class="card-img-top">
+            <img src="./formals/formals-4.jpg" class="card-img-top product-img">
             <div class="card-body">
               <h5 class="card-text text-danger text-center">Raymond</h5>
               <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
               <div>
                 <h5>Price Range:</h5>
-                <p>$4000</p>
+                <p class="brand-price">$4000</p>
               </div>
             </div>
             <div class="text-center head-card-hover">
-              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              <a class="cart-hover add-product" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
           </div>
         </div>
         <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
           <div class="card hover-none">
-            <img src="./formals/formals-5.jpg" class="card-img-top">
+            <img src="./formals/formals-5.jpg" class="card-img-top product-img">
             <div class="card-body">
               <h5 class="card-text text-danger text-center">Indian Terrain</h5>
               <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
               <div>
                 <h5>Price Range:</h5>
-                <p>$2600</p>
+                <p class="brand-price">$2600</p>
               </div>
             </div>
             <div class="text-center head-card-hover">
-              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              <a class="cart-hover add-product" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
           </div>
         </div>
         <div class="col-lg-2 col-md-4 col-sm-6 card-hover">
           <div class="card hover-none">
-            <a href="#"><img src="./formals/formals-6.jpg" class="card-img-top"></a>
+            <a href="#"><img src="./formals/formals-6.jpg" class="card-img-top product-img"></a>
             <div class="card-body">
               <h5 class="card-text text-danger text-center">Arrow</h5>
               <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
               <div>
                 <h5>Price Range:</h5>
-                <p>$5000</p>
+                <p class="brand-price">$5000</p>
               </div>
             </div>
             <div class="text-center head-card-hover">
-              <a class="cart-hover" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+              <a class="cart-hover add-product" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
           </div>
         </div>
@@ -955,7 +976,10 @@
       </div>
     </footer>
 
+  
   <script src="./index.js"></script>
+  <script src="./cart.js"></script>
+ 
   <script src="https://kit.fontawesome.com/ef6dd004c6.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
