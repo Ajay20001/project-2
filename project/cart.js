@@ -84,6 +84,11 @@ let addItemsToCart = (cardImgSrc, cartProductTitle, cartProductPrice) => {
   cartRow.innerHTML = cartContent;
   cartContainer.append(cartRow);
   cartRow.getElementsByClassName('close')[0].addEventListener('click', (event) => {
+    //Sub Number of product
+    count--;
+    noOfProducts.innerText = count;
+
+    // Deleting card 
     var clickedBtn = event.target;
     clickedBtn.parentElement.parentElement.remove();
     cartTotalPrice();
