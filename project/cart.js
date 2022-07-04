@@ -1,3 +1,7 @@
+//Number of product
+var count = 2;
+let noOfProducts = document.getElementById('no-of-product');
+
 //Cart
 let closeBtn = document.getElementsByClassName("close");
 for(let i=0; i < closeBtn.length; i++)
@@ -5,6 +9,10 @@ for(let i=0; i < closeBtn.length; i++)
   // delete cart
   var btn = closeBtn[i];
   btn.addEventListener('click', (event) => {
+    //Sub Number of product
+    count--;
+    noOfProducts.innerText = count;
+
     var clickedBtn = event.target;
     clickedBtn.parentElement.parentElement.remove();
     cartTotalPrice();
@@ -29,6 +37,10 @@ for(let i=0; i<addToCart.length; i++)
 {
   var button = addToCart[i];
   button.addEventListener('click', (event) => {
+    //Add Number of product
+    count++;
+    noOfProducts.innerText = count;
+
     var newEvent = event.target;
     var shopItem = newEvent.parentElement.parentElement;
     var cartProductTitle = shopItem.getElementsByClassName('card-text')[0].innerHTML;
@@ -104,5 +116,7 @@ var addToCart = document.getElementsByClassName('place-order')[0];
         text: 'Your Order is placed',
         confirmButtonColor: '#dc3545'
     })
+
+    
  })
 
